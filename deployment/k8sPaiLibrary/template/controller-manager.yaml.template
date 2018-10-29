@@ -32,6 +32,7 @@ spec:
     - --service-cluster-ip-range
     - {{ clusterconfig['service-cluster-ip-range'] }}
     - --leader-elect=true
+    --service-account-private-key-file=/srv/kubernetes/server.key
     livenessProbe:
       httpGet:
         path: /healthz
