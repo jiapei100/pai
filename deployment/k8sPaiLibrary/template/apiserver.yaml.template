@@ -51,3 +51,10 @@ spec:
       limits:
         memory: "1Gi"
         cpu: "1000m"
+    volumeMounts:
+        - mountPath: /var
+          name: system-data-mount
+  volumes:
+    - name: system-data-mount
+      hostPath:
+        path: /var
